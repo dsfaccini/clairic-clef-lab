@@ -43,8 +43,8 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pydantic", specifier = ">=2.14.1" },
-    { name = "pydantic-ai-slim", git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_ai_slim&rev=eaf76dd865d78111758990e5d218fb48b284f944" },
-    { name = "pydantic-graph", git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_graph&rev=eaf76dd865d78111758990e5d218fb48b284f944" },
+    { name = "pydantic-ai-slim", git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_ai_slim&rev=8c52177f6724ec0fd7cce1a666217c3d5ab53830" },
+    { name = "pydantic-graph", git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_graph&rev=8c52177f6724ec0fd7cce1a666217c3d5ab53830" },
 ]
 
 [package.metadata.requires-dev]
@@ -206,8 +206,8 @@ wheels = [
 
 [[package]]
 name = "pydantic-ai-slim"
-version = "2.57.1.dev113+eaf76dd86"
-source = { git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_ai_slim&rev=eaf76dd865d78111758990e5d218fb48b284f944#eaf76dd865d78111758990e5d218fb48b284f944" }
+version = "2.57.1.dev115+8c52177f6"
+source = { git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_ai_slim&rev=8c52177f6724ec0fd7cce1a666217c3d5ab53830#8c52177f6724ec0fd7cce1a666217c3d5ab53830" }
 dependencies = [
     { name = "anyio" },
     { name = "genai-prices" },
@@ -327,8 +327,8 @@ wheels = [
 
 [[package]]
 name = "pydantic-graph"
-version = "2.57.1.dev113+eaf76dd86"
-source = { git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_graph&rev=eaf76dd865d78111758990e5d218fb48b284f944#eaf76dd865d78111758990e5d218fb48b284f944" }
+version = "2.57.1.dev115+8c52177f6"
+source = { git = "https://github.com/pydantic/pydantic-ai.git?subdirectory=pydantic_graph&rev=8c52177f6724ec0fd7cce1a666217c3d5ab53830#8c52177f6724ec0fd7cce1a666217c3d5ab53830" }
 dependencies = [
     { name = "anyio" },
     { name = "logfire-api" },
