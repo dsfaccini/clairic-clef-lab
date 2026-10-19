@@ -21,8 +21,8 @@ requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
-pydantic-ai-slim = { git = "https://github.com/pydantic/pydantic-ai.git", subdirectory = "pydantic_ai_slim", rev = "a0eb116252d28861f58cdb2264ab5c5e21ca82c3" }
-pydantic-graph = { git = "https://github.com/pydantic/pydantic-ai.git", subdirectory = "pydantic_graph", rev = "a0eb116252d28861f58cdb2264ab5c5e21ca82c3" }
+pydantic-ai-slim = { git = "https://github.com/pydantic/pydantic-ai.git", subdirectory = "pydantic_ai_slim", rev = "eaf76dd865d78111758990e5d218fb48b284f944" }
+pydantic-graph = { git = "https://github.com/pydantic/pydantic-ai.git", subdirectory = "pydantic_graph", rev = "eaf76dd865d78111758990e5d218fb48b284f944" }
 
 [dependency-groups]
 dev = [

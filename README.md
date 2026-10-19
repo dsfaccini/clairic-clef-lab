@@ -9,6 +9,8 @@ Turn a fictional Spanish amendment into a typed candidate change with inspectabl
 The result is an intake card for review. It does not compute legal effect or applicability.
 All documents and instrument names in this repository are fictional.
 
+![Editorial diagram of a fictional Spanish amendment flowing to evidence and a review card; the effective date remains null.](assets/cover.png)
+
 ## Run without credentials
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then:
@@ -37,6 +39,16 @@ The replacement example yields this candidate:
 
 Clef selected `replacement`. The complete card includes the source text, verified character offsets,
 each field's native evidence, operation probabilities, token usage, and review reasons.
+
+## Replay visuals
+
+These cards visualize the captured missing-date replay. They show the accepted dates as `null`, keep the model's guess separate, and route the candidate to review.
+
+![Visualization of CLI replay: fictional repeal of article 12, verified target text, both dates null, Clef repeal probability 96.47%, and needs_review.](assets/intake-card.png)
+
+![Twelve-second visualization of CLI replay, fictional example: source evidence flows through Clairic fields and Clef probabilities to needs_review.](assets/replay.gif)
+
+The GIF has an MP4 counterpart at [assets/replay.mp4](assets/replay.mp4). Regenerate the card and animation with `uv run --with pillow python scripts/render_media.py`; provenance and the cover-generation prompt are in [assets/README.md](assets/README.md).
 
 ## Run live
 
