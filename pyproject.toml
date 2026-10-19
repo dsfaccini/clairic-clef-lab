@@ -1,0 +1,31 @@
+[project]
+name = "clairic-clef-lab"
+version = "0.1.0"
+description = "Inspect Cloudflare extraction and decision models on fictional Spanish amendments"
+readme = "README.md"
+authors = [
+    { name = "David Sanchez", email = "64162682+dsfaccini@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.14.1",
+    "pydantic-ai-slim",
+    "pydantic-graph",
+]
+
+[project.scripts]
+clairic-clef-lab = "clairic_clef_lab:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+pydantic-ai-slim = { git = "https://github.com/pydantic/pydantic-ai.git", subdirectory = "pydantic_ai_slim", rev = "a0eb116252d28861f58cdb2264ab5c5e21ca82c3" }
+pydantic-graph = { git = "https://github.com/pydantic/pydantic-ai.git", subdirectory = "pydantic_graph", rev = "a0eb116252d28861f58cdb2264ab5c5e21ca82c3" }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]

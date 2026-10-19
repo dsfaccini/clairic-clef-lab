@@ -1,0 +1,116 @@
+{
+  "name": "missing-date",
+  "state": "Documento de ejemplo ficticio. Se deroga el artículo 12 de la Ley Demo B.",
+  "requests": {
+    "clairic": {
+      "model": "clairic",
+      "state": "Documento de ejemplo ficticio. Se deroga el artículo 12 de la Ley Demo B.",
+      "reference_date": "2026-10-19",
+      "fields": {
+        "target": {
+          "type": "text",
+          "instructions": "Copia el artículo afectado y su norma, exactamente como aparece en el texto."
+        },
+        "effective_date": {
+          "type": "date",
+          "instructions": "Fecha expresamente indicada para la entrada en vigor."
+        },
+        "publication_date": {
+          "type": "date",
+          "instructions": "Fecha de publicación expresamente indicada. Devuelve null si no aparece."
+        },
+        "article_number": {
+          "type": "number",
+          "integer": true,
+          "instructions": "Número del artículo afectado."
+        }
+      }
+    },
+    "clef": {
+      "model": "clef",
+      "state": "Documento de ejemplo ficticio. Se deroga el artículo 12 de la Ley Demo B.",
+      "questions": {
+        "operation": {
+          "type": "choice",
+          "instructions": "Clasifica la operación legislativa expresamente descrita en el documento ficticio.",
+          "criteria": {
+            "replacement": "Sustituye texto existente.",
+            "addition": "Agrega una disposición.",
+            "repeal": "Elimina una disposición.",
+            "other": "Describe otra operación.",
+            "unclear": "El texto no permite determinar la operación."
+          }
+        }
+      }
+    }
+  },
+  "clairic": {
+    "model": "clairic",
+    "answers": {
+      "target": {
+        "type": "text",
+        "p_null": 0.00003299050877103582,
+        "span": [
+          44,
+          72
+        ],
+        "guess": "artículo 12 de la Ley Demo B",
+        "confidence": 0.7116040587425232,
+        "value": "artículo 12 de la Ley Demo B"
+      },
+      "effective_date": {
+        "type": "date",
+        "p_null": 0.9999845027923584,
+        "guess": "2026-10-19",
+        "confidence": 0.962734761209795,
+        "value": null
+      },
+      "publication_date": {
+        "type": "date",
+        "p_null": 0.9999971389770508,
+        "guess": "2026-11-03",
+        "confidence": 0.023678808396267268,
+        "value": null
+      },
+      "article_number": {
+        "type": "number",
+        "p_null": 1.2535541316083254e-7,
+        "guess": 12,
+        "confidence": 0.9999600661917374,
+        "value": 12
+      }
+    },
+    "truncated": false,
+    "usage": {
+      "state_tokens": 20,
+      "image_tokens": 0,
+      "schema_tokens": 382,
+      "input_tokens": 422,
+      "output_tokens": 0,
+      "passes": 2
+    }
+  },
+  "clef": {
+    "model": "clef",
+    "answers": {
+      "operation": {
+        "type": "choice",
+        "choice": "repeal",
+        "probabilities": {
+          "replacement": 0.017,
+          "addition": 0.0046,
+          "repeal": 0.9647,
+          "other": 0.0071,
+          "unclear": 0.0066
+        },
+        "confidence": 0.9138
+      }
+    },
+    "usage": {
+      "input_tokens": 227,
+      "output_tokens": 0
+    }
+  },
+  "recorded_on": "2026-10-19",
+  "provenance": "Native service results captured through authenticated Cloudflare MCP on fictional input. These are JSON result captures, not HTTP recordings. Replay makes no model requests."
+}

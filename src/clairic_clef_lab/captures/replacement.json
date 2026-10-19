@@ -1,0 +1,116 @@
+{
+  "name": "replacement",
+  "state": "Documento de ejemplo ficticio. Se reemplaza el artículo 7 de la Ley Demo A. La disposición rige el 1 de marzo de 2027.",
+  "requests": {
+    "clairic": {
+      "model": "clairic",
+      "state": "Documento de ejemplo ficticio. Se reemplaza el artículo 7 de la Ley Demo A. La disposición rige el 1 de marzo de 2027.",
+      "reference_date": "2026-10-19",
+      "fields": {
+        "target": {
+          "type": "text",
+          "instructions": "Copia el artículo que se reemplaza, exactamente como aparece en el texto."
+        },
+        "effective_date": {
+          "type": "date",
+          "instructions": "Fecha expresamente indicada para la entrada en vigor."
+        },
+        "publication_date": {
+          "type": "date",
+          "instructions": "Fecha de publicación expresamente indicada. Devuelve null si no aparece."
+        },
+        "article_number": {
+          "type": "number",
+          "integer": true,
+          "instructions": "Número del artículo que se reemplaza."
+        }
+      }
+    },
+    "clef": {
+      "model": "clef",
+      "state": "Documento de ejemplo ficticio. Se reemplaza el artículo 7 de la Ley Demo A. La disposición rige el 1 de marzo de 2027.",
+      "questions": {
+        "operation": {
+          "type": "choice",
+          "instructions": "Clasifica la operación legislativa expresamente descrita en el documento ficticio.",
+          "criteria": {
+            "replacement": "Sustituye texto existente.",
+            "addition": "Agrega una disposición.",
+            "repeal": "Elimina una disposición.",
+            "other": "Describe otra operación.",
+            "unclear": "El texto no permite determinar la operación."
+          }
+        }
+      }
+    }
+  },
+  "clairic": {
+    "model": "clairic",
+    "answers": {
+      "target": {
+        "type": "text",
+        "p_null": 0.0002775812172330916,
+        "span": [
+          47,
+          74
+        ],
+        "guess": "artículo 7 de la Ley Demo A",
+        "confidence": 0.4167751371860504,
+        "value": "artículo 7 de la Ley Demo A"
+      },
+      "effective_date": {
+        "type": "date",
+        "p_null": 0.000007860169716877863,
+        "guess": "2027-03-01",
+        "confidence": 0.9993616437524568,
+        "value": "2027-03-01"
+      },
+      "publication_date": {
+        "type": "date",
+        "p_null": 0.9999897480010986,
+        "guess": "2026-11-19",
+        "confidence": 0.0233958986162081,
+        "value": null
+      },
+      "article_number": {
+        "type": "number",
+        "p_null": 1.0602050082297865e-7,
+        "guess": 7,
+        "confidence": 0.9999551788173072,
+        "value": 7
+      }
+    },
+    "truncated": false,
+    "usage": {
+      "state_tokens": 36,
+      "image_tokens": 0,
+      "schema_tokens": 388,
+      "input_tokens": 460,
+      "output_tokens": 0,
+      "passes": 2
+    }
+  },
+  "clef": {
+    "model": "clef",
+    "answers": {
+      "operation": {
+        "type": "choice",
+        "choice": "replacement",
+        "probabilities": {
+          "replacement": 0.9689,
+          "addition": 0.0056,
+          "repeal": 0.0122,
+          "other": 0.0072,
+          "unclear": 0.0061
+        },
+        "confidence": 0.9237
+      }
+    },
+    "usage": {
+      "input_tokens": 243,
+      "output_tokens": 0
+    }
+  },
+  "recorded_on": "2026-10-19",
+  "provenance": "Native service results captured through authenticated Cloudflare MCP on fictional input. These are JSON result captures, not HTTP recordings. Replay makes no model requests."
+}
